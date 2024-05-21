@@ -19,10 +19,10 @@ const getMovieData = async function (){
   dispatch(addUpcomingHeader("Upcoming"));
 }
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(()=>{
   (!nowUpcomingMovies && getMovieData());
   // getMovieData();
+// eslint-disable-next-line react-hooks/exhaustive-deps
 },[]);
 
 }

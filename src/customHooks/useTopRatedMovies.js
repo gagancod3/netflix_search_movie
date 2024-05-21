@@ -19,10 +19,10 @@ const getMovieData = async function (){
   dispatch(addTopRatedHeader("Top Rated"));
 }
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(()=>{
   (!nowTopRatedMovies && getMovieData());
   // getMovieData();
+// eslint-disable-next-line react-hooks/exhaustive-deps
 },[]);
 
 }

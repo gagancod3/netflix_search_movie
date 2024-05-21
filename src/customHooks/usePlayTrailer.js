@@ -3,10 +3,8 @@ import { API_options } from "../utils/constants";
 import { addTrailer } from "../utils/movieSlice";
 import { useEffect } from "react";
 
-
 const usePlayTrailer = (movieId) => {
-
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
   // console.log(movieId);
 
   const getVideoBackground = async function () {
@@ -19,15 +17,16 @@ const dispatch = useDispatch();
     const filterTrailerData = json.results.filter((data) => {
       if (data.type === "Trailer") return data;
     });
-    const trailer = filterTrailerData.length ? filterTrailerData[0] : json.results[0];
+    const trailer = filterTrailerData.length
+      ? filterTrailerData[0]
+      : json.results[0];
     dispatch(addTrailer(trailer));
-  }; 
+  };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     getVideoBackground();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-}
+};
 
 export default usePlayTrailer;

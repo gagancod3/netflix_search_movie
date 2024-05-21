@@ -19,10 +19,10 @@ const getMovieData = async function (){
   dispatch(addPopularHeader("Popular"));
 }
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(()=>{
   (!nowPopularMovies && getMovieData());
   // getMovieData();
+// eslint-disable-next-line react-hooks/exhaustive-deps
 },[]);
 
 }
