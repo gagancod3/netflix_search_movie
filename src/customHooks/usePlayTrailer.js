@@ -23,6 +23,7 @@ const dispatch = useDispatch();
     dispatch(addTrailer(trailer));
   }; 
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     getVideoBackground();
   }, []);

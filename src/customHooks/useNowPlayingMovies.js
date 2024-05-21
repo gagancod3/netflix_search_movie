@@ -20,6 +20,7 @@ const getMovieData = async function (){
   dispatch(addNowPlayingHeader("Now Playing"));
 }
 
+// eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(()=>{
   (!nowPlayingMovies && getMovieData())
   // getMovieData();
