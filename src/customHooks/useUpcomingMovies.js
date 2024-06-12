@@ -22,7 +22,7 @@ const getMovieData = async function (){
 useEffect(()=>{
   (!nowUpcomingMovies && getMovieData());
   // getMovieData();
-// eslint-disable-next-line react-hooks/exhaustive-deps
+// eslint-disable-next-line
 },[]);
 
 }

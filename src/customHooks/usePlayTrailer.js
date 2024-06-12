@@ -21,11 +21,11 @@ const usePlayTrailer = (movieId) => {
       ? filterTrailerData[0]
       : json.results[0];
     dispatch(addTrailer(trailer));
-  }; 
+  };
 
   useEffect(() => {
     getVideoBackground();
-// eslint-disable-next-line react-hooks/exhaustive-deps
+// eslint-disable-next-line
   }, []);
 };
 
