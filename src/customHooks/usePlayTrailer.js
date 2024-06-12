@@ -16,6 +16,7 @@ const usePlayTrailer = (movieId) => {
     // console.log(json);
     const filterTrailerData = json.results.filter((data) => {
       if (data.type === "Trailer") return data;
+      return null;
     });
     const trailer = filterTrailerData.length
       ? filterTrailerData[0]
